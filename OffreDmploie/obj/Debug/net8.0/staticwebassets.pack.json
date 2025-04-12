@@ -1,0 +1,437 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\OffreDmploie.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OffreDmploie.wnj2u1kae6.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\LineIcons.2.0.css",
+      "PackagePath": "staticwebassets\\assets\\css\\LineIcons.2.0.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\glightbox.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\glightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\css\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\assets\\css\\tiny-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\glightbox.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\glightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\jquery-counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tiny-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\LineIcons.2.0.css",
+      "PackagePath": "staticwebassets\\css\\LineIcons.2.0.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\glightbox.min.css",
+      "PackagePath": "staticwebassets\\css\\glightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\css\\tiny-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\fonts\\LineIcons.eot",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.eot"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\fonts\\LineIcons.svg",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.svg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\fonts\\LineIcons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\fonts\\LineIcons.woff",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.woff"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\fonts\\LineIcons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\LineIcons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\breadcrumb\\breadcrumb-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\breadcrumb\\breadcrumb-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\call-action\\cat-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\call-action\\cat-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client1.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client1.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client2.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client2.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client3.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client3.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client4.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client4.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client5.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client5.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\clients\\client6.png",
+      "PackagePath": "staticwebassets\\images\\clients\\client6.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\favicon.svg",
+      "PackagePath": "staticwebassets\\images\\favicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\hero\\hero-image.png",
+      "PackagePath": "staticwebassets\\images\\hero\\hero-image.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\hero\\pattern.png",
+      "PackagePath": "staticwebassets\\images\\hero\\pattern.png"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\loading.svg",
+      "PackagePath": "staticwebassets\\images\\loading.svg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\images\\logo\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\glightbox.min.js",
+      "PackagePath": "staticwebassets\\js\\glightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\jquery-counterup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\js\\tiny-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OffreDmploie.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OffreDmploie.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.OffreDmploie.props",
+      "PackagePath": "build\\OffreDmploie.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.OffreDmploie.props",
+      "PackagePath": "buildMultiTargeting\\OffreDmploie.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.OffreDmploie.props",
+      "PackagePath": "buildTransitive\\OffreDmploie.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

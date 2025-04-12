@@ -1,0 +1,59 @@
+﻿@model IEnumerable<OffreDmploie.Models.Candidature>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                Nom de l'offre
+            </th>
+            <th>
+                Description de votre candidature
+            </th>
+            <th>
+                Date de Postulation 
+            </th>
+            <th>
+                Status de votre Candidature
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job.NomDeLoffre)
+                </td>
+
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescriptionCondidature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datedesoumis)
+                </td>    
+
+                <td style="color:@(item.Statusdecondidature == "En cours" ? "#FFC300" :
+                                    item.Statusdecondidature == "Accepée" ? "green" :  "red")">
+                    @Html.DisplayFor(modelItem => item.Statusdecondidature)
+                </td>
+                <td>
+                
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

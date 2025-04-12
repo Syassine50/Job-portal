@@ -1,0 +1,69 @@
+﻿@model OffreDmploie.Models.Candidature
+@{
+    ViewData["Title"] = "Détails de la candidature";
+}
+
+<div class="container mt-5">
+    <div class="card shadow rounded-4">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Détails de la candidature</h4>
+            <span class="badge bg-light text-dark">@Model.Statusdecondidature</span>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <strong>Nom du candidat :</strong>
+                    <p>@Model.User.UserName</p>
+                </div>
+                <div class="col-md-6">
+                    <strong>Date de postulation :</strong>
+                    <p>@Model.Datedesoumis?.ToString("dd/MM/yyyy")</p>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <strong>Description de la candidature :</strong>
+                <p class="text-muted">@Model.DescriptionCondidature</p>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <strong>Nom de l'offre :</strong>
+                    <p>@Model.Job.NomDeLoffre</p>
+                </div>
+
+                @if (!User.IsInRole("Candidat"))
+                {
+                    <div class="col-md-6">
+                        <strong>CV :</strong>
+                        <p>
+                            @if (Model.ResumeFile != null)
+                            {
+
+                                <a asp-controller="Candidatures" asp-action="DownloadResume" class="btn btn-sm btn-outline-success" asp-route-id="@Model.Id">
+                                    <i class="bi bi-file-earmark-pdf me-1"></i>Télécharger
+                                </a>
+                            }
+                            else
+                            {
+                                <span class="text-danger">Aucun CV disponible</span>
+                            }
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            @if (!User.IsInRole("Candidat"))
+            {
+                <a asp-action="Index"  class="btn btn-secondary">⬅ Retour à la liste</a>
+            }
+            @if (!User.IsInRole("Entreprise"))
+            {
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a>
+ 
+            }
+        </div>
+    </div>
+</div>
+

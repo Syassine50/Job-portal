@@ -1,0 +1,1 @@
+﻿--Insertion db competences 

@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\controllers\\candidaturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\controllers\\candidaturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\candidatures\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\candidatures\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\candidatures\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\candidatures\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\jobs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\jobs\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\candidatures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\candidatures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\jobs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\jobs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CandidaturesController.cs",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\CandidaturesController.cs",
+              "RelativeDocumentMoniker": "OffreDmploie\\Controllers\\CandidaturesController.cs",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\CandidaturesController.cs",
+              "RelativeToolTip": "OffreDmploie\\Controllers\\CandidaturesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T16:39:26.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Models\\Job.cs",
+              "RelativeDocumentMoniker": "OffreDmploie\\Models\\Job.cs",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Models\\Job.cs",
+              "RelativeToolTip": "OffreDmploie\\Models\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T16:02:58.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Details.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Jobs\\Details.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Details.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Jobs\\Details.cshtml",
+              "ViewState": "AgIAABsBAAAAAAAAAAAAAOcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T15:58:34.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T15:56:20.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Details.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Details.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Details.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Candidatures\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T15:56:15.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Index.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Jobs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Index.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Jobs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T15:49:13.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Index.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Index.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Index.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Candidatures\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T15:49:06.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T14:37:12.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OffreDmploie\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OffreDmploie\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwEYAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-12T13:17:33.567Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1240,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

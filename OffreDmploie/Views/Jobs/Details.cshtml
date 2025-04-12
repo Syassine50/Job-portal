@@ -1,0 +1,320 @@
+﻿@model OffreDmploie.Models.Job
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="container py-4">
+    <div class="card shadow border-0">
+        <!-- En-tête de la carte - Bleu plus clair -->
+        <div class="card-header bg-info text-dark py-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="mb-0 text-dark">@Model.NomDeLoffre</h2>
+                <span class="badge bg-white text-info">@Model.Statusdeloffre</span>
+            </div>
+        </div>
+
+        <!-- Corps de la carte -->
+        <div class="card-body p-4">
+            <!-- Section des détails principaux -->
+            <section class="mb-4">
+                <h4 class="border-bottom pb-2 mb-3 text-dark">Détails du poste</h4>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-building me-2"></i>Domaine
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Domaine.Nomdomaine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-geo-alt me-2"></i>Lieu
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Lieu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-file-earmark-text me-2"></i>Type de contrat
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Typedecontrat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-briefcase me-2"></i>Type d'offre
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Typedeloffre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section du calendrier -->
+            <section class="mb-4">
+                <h4 class="border-bottom pb-2 mb-3 text-dark">Calendrier</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-calendar-plus me-2"></i>Date de création
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Datecreation.ToString()</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-calendar-x me-2"></i>Date de fin
+                                </h6>
+                                <p class="card-text fw-bold text-dark">@Model.Datefin.ToString()</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section de la description -->
+            <section class="mb-4">
+                <h4 class="border-bottom pb-2 mb-3 text-dark">Description</h4>
+                <div class="card bg-light border-0">
+                    <div class="card-body text-dark">
+                        @Html.Raw(Model.Descriptiondeloffre)
+                    </div>
+                </div>
+            </section>
+            <section class="mb-4">
+                <h4 class="border-bottom pb-2 mb-3 text-dark">Information complémentaire</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card h-100 bg-light border-0">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-dark">
+                                    <i class="bi bi-person me-2"></i>Publiée par
+                                </h6>
+                                <p class="card-text fw-bold text-dark">ID: @Model.User.Id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section des compétences -->
+            <section class="mb-4">
+                <h4 class="border-bottom pb-2 mb-3 text-dark">
+                    <i class="bi bi-stars me-2"></i>Compétences requises
+                </h4>
+
+                <div class="card bg-light border-0">
+                    <div class="card-body">
+                        @if (Model.Domaine.Competences.Count == 0)
+                        {
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle me-2"></i>Pas de compétences insérées pour ce job
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-info text-dark">
+                                        <tr>
+                                            <th scope="col">
+                                                <i class="bi bi-check2-circle me-2"></i>Nom des compétences requises
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Domaine.Competences)
+                                        {
+                                            <tr>
+                                                <td class="text-dark fw-medium">
+                                                    @Html.DisplayFor(modelItem => item.Nomcompetences)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section des candidatures (pour Entreprise) -->
+            @if (User.IsInRole("Entreprise"))
+            {
+                <section class="mb-4">
+                    <h4 class="border-bottom pb-2 mb-3 text-dark d-flex align-items-center">
+                        <i class="bi bi-people me-2"></i>Candidatures
+                        <span class="badge bg-info text-white ms-2">@Model.Candidatures.Count()</span>
+                    </h4>
+
+                    <div class="card bg-light border-0">
+                        <div class="card-body">
+                            @if (Model.Candidatures.Count == 0)
+                            {
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle me-2"></i>Personne n'a encore postulé pour ce poste
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-info text-dark">
+                                            <tr>
+                                                <th scope="col">Nom du candidat</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Date de soumission</th>
+                                                <th scope="col">Statut</th>
+                                                <th scope="col">CV</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Candidatures)
+                                            {
+                                                <tr>
+                                                    <td class="text-dark">
+                                                        <i class="bi bi-person me-1"></i>@Html.DisplayFor(modelItem => item.User.UserName)
+                                                    </td>
+                                                    <td class="text-dark">
+                                                        @Html.DisplayFor(modelItem => item.DescriptionCondidature)
+                                                    </td>
+                                                    <td class="text-dark">
+                                                        <i class="bi bi-calendar-date me-1"></i>@Html.DisplayFor(modelItem => item.Datedesoumis)
+                                                    </td>
+                                                    <td>
+                                                        @if (item.Statusdecondidature == "En cours")
+                                                        {
+                                                            <span class="badge bg-warning text-dark">
+                                                                <i class="bi bi-hourglass-split me-1"></i>En cours
+                                                            </span>
+                                                        }
+                                                        else if (item.Statusdecondidature == "Acceptée")
+                                                        {
+                                                            <span class="badge bg-success">
+                                                                <i class="bi bi-check-circle me-1"></i>Acceptée
+                                                            </span>
+                                                        }
+                                                        else if (item.Statusdecondidature == "Rejetée")
+                                                        {
+                                                            <span class="badge bg-danger">
+                                                                <i class="bi bi-x-circle me-1"></i>Rejetée
+                                                            </span>
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @if (item.ResumeFile != null && !User.IsInRole("Candidat"))
+                                                        {
+                                                            <a asp-controller="Candidatures" asp-action="DownloadResume" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">
+                                                                <i class="bi bi-file-earmark-pdf me-1"></i>Télécharger
+                                                            </a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="text-muted">
+                                                                <i class="bi bi-file-earmark-x me-1"></i>Aucun CV
+                                                            </span>
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        @if (item.Statusdecondidature == "En cours")
+                                                        {
+                                                            <div class="btn-group" role="group">
+                                                                <a asp-controller="Candidatures" asp-action="AcceptCand" asp-route-id="@item.Id" class="btn btn-success btn-sm">
+                                                                    <i class="bi bi-check me-1"></i>Accepter
+                                                                </a>
+                                                                <a asp-controller="Candidatures" asp-action="RejectCand" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                                                    <i class="bi bi-x me-1"></i>Refuser
+                                                                </a>
+                                                            </div>
+                                                        }
+                                                        else if (item.Statusdecondidature == "Acceptée")
+                                                        {
+                                                            <span class="text-success">
+                                                                <i class="bi bi-check-circle-fill me-1"></i>Candidature acceptée
+                                                            </span>
+                                                        }
+                                                        else if (item.Statusdecondidature == "Rejetée")
+                                                        {
+                                                            <span class="text-danger">
+                                                                <i class="bi bi-x-circle-fill me-1"></i>Candidature refusée
+                                                            </span>
+                                                        }
+
+                                                        <a asp-controller="Candidatures" asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-warning btn-sm">
+                                                            <i class="bi bi-x me-1"></i>Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+            }
+
+            <!-- Section des informations complémentaires -->
+
+        </div>
+
+        <!-- Pied de la carte avec les boutons d'action -->
+        <div class="card-footer bg-light d-flex justify-content-between py-3">
+            <div>
+                @if (User.IsInRole("Candidat"))
+                {
+                    <a asp-controller="Candidatures" asp-action="Create" asp-route-id="@Model?.Id" class="btn btn-info text-white">
+                        <i class="bi bi-send me-1"></i>Postuler à cette offre
+                    </a>
+                }
+            </div>
+            <!-- Pied de la carte avec les boutons d'action -->
+            <div class="card-footer bg-light d-flex justify-content-end gap-2 py-3">
+                <a asp-action="Index" class="btn btn-secondary m-2">
+                    <i class="bi bi-arrow-left me-1"></i>Retour à la liste
+                </a>
+                @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || User.IsInRole("Entreprise")))
+                {
+                    @if (Model.Statusdeloffre == "Ouvert")
+                    {
+                        <a asp-action="CloseJob" asp-route-id="@Model?.Id" class="btn btn-danger btn-sm m-2">
+                            <i class="bi bi-pencil me-1"></i>Fermer l'offre
+                        </a>
+                    }
+                    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning btn-sm m-2">Edit</a>
+
+					<br />
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+}

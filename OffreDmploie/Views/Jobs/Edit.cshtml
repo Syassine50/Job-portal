@@ -1,0 +1,141 @@
+﻿@model OffreDmploie.Models.Job
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NomDeLoffre" class="control-label"></label>
+                <input asp-for="NomDeLoffre" class="form-control" />
+                <span asp-validation-for="NomDeLoffre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descriptiondeloffre" class="control-label"></label>
+                <input asp-for="Descriptiondeloffre" class="form-control" />
+                <span asp-validation-for="Descriptiondeloffre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datefin" class="control-label"></label>
+                <input asp-for="Datefin" class="form-control" type="date" />
+                <span asp-validation-for="Datefin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lieu" class="control-label">Pays</label>
+                <select asp-for ="Lieu" class="form-control">
+                    <option value="">-- Sélectionnez un pays --</option>
+                    <option value="Afghanistan">🇦🇫 Afghanistan</option>
+                    <option value="Albanie">🇦🇱 Albanie</option>
+                    <option value="Algérie">🇩🇿 Algérie</option>
+                    <option value="Andorre">🇦🇩 Andorre</option>
+                    <option value="Angola">🇦🇴 Angola</option>
+                    <option value="Argentine">🇦🇷 Argentine</option>
+                    <option value="Arménie">🇦🇲 Arménie</option>
+                    <option value="Australie">🇦🇺 Australie</option>
+                    <option value="Autriche">🇦🇹 Autriche</option>
+                    <option value="Azerbaïdjan">🇦🇿 Azerbaïdjan</option>
+                    <option value="Belgique">🇧🇪 Belgique</option>
+                    <option value="Bénin">🇧🇯 Bénin</option>
+                    <option value="Brésil">🇧🇷 Brésil</option>
+                    <option value="Burkina Faso">🇧🇫 Burkina Faso</option>
+                    <option value="Canada">🇨🇦 Canada</option>
+                    <option value="Chili">🇨🇱 Chili</option>
+                    <option value="Chine">🇨🇳 Chine</option>
+                    <option value="Colombie">🇨🇴 Colombie</option>
+                    <option value="Croatie">🇭🇷 Croatie</option>
+                    <option value="Danemark">🇩🇰 Danemark</option>
+                    <option value="Égypte">🇪🇬 Égypte</option>
+                    <option value="France">🇫🇷 France</option>
+                    <option value="Allemagne">🇩🇪 Allemagne</option>
+                    <option value="Grèce">🇬🇷 Grèce</option>
+                    <option value="Hongrie">🇭🇺 Hongrie</option>
+                    <option value="Inde">🇮🇳 Inde</option>
+                    <option value="Indonésie">🇮🇩 Indonésie</option>
+                    <option value="Iran">🇮🇷 Iran</option>
+                    <option value="Irak">🇮🇶 Irak</option>
+                    <option value="Irlande">🇮🇪 Irlande</option>
+                    <option value="Israël">🇮🇱 Israël</option>
+                    <option value="Italie">🇮🇹 Italie</option>
+                    <option value="Japon">🇯🇵 Japon</option>
+                    <option value="Jordanie">🇯🇴 Jordanie</option>
+                    <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
+                    <option value="Kenya">🇰🇪 Kenya</option>
+                    <option value="Corée du Sud">🇰🇷 Corée du Sud</option>
+                    <option value="Mexique">🇲🇽 Mexique</option>
+                    <option value="Maroc">🇲🇦 Maroc</option>
+                    <option value="Pays-Bas">🇳🇱 Pays-Bas</option>
+                    <option value="Nigéria">🇳🇬 Nigéria</option>
+                    <option value="Norvège">🇳🇴 Norvège</option>
+                    <option value="Pakistan">🇵🇰 Pakistan</option>
+                    <option value="Pologne">🇵🇱 Pologne</option>
+                    <option value="Portugal">🇵🇹 Portugal</option>
+                    <option value="Qatar">🇶🇦 Qatar</option>
+                    <option value="Roumanie">🇷🇴 Roumanie</option>
+                    <option value="Russie">🇷🇺 Russie</option>
+                    <option value="Arabie Saoudite">🇸🇦 Arabie Saoudite</option>
+                    <option value="Sénégal">🇸🇳 Sénégal</option>
+                    <option value="Serbie">🇷🇸 Serbie</option>
+                    <option value="Singapour">🇸🇬 Singapour</option>
+                    <option value="Afrique du Sud">🇿🇦 Afrique du Sud</option>
+                    <option value="Espagne">🇪🇸 Espagne</option>
+                    <option value="Suède">🇸🇪 Suède</option>
+                    <option value="Suisse">🇨🇭 Suisse</option>
+                    <option value="Syrie">🇸🇾 Syrie</option>
+                    <option value="Tunisie">🇹🇳 Tunisie</option>
+                    <option value="Turquie">🇹🇷 Turquie</option>
+                    <option value="Ukraine">🇺🇦 Ukraine</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Typedeloffre" class="control-label"></label>
+                <select asp-for="Typedeloffre" class="form-control">
+                    <option value="">-- Sélectionner un type d'offre --</option>
+                    <option value="Intérim">Intérim</option>
+                    <option value="Service Civique">Service Civique</option>
+                    <option value="VIE">VIE</option>
+                    <option value="Temps partiel">Temps partiel</option>
+                    <option value="Temps plein">Temps plein</option>
+                </select>
+                <span asp-validation-for="Typedeloffre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Typedecontrat" class="control-label"></label>
+                <select asp-for="Typedecontrat" class="form-control">
+                    <option value="">-- Sélectionner un type de contrat --</option>
+                    <option value="CDI">CDI</option>
+                    <option value="CDD">CDD</option>
+                    <option value="Stage">Stage</option>
+                    <option value="Freelance">Freelance</option>
+                    <option value="Alternance">Alternance</option>
+                </select>
+                <span asp-validation-for="Typedecontrat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdDomaine" class="control-label"></label>
+                <select asp-for="IdDomaine" class="form-control" asp-items="ViewBag.IdDomaine"></select>
+                <span asp-validation-for="IdDomaine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

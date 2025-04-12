@@ -1,0 +1,57 @@
+﻿@model IEnumerable<OffreDmploie.Models.Job>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NomDeLoffre)</th>
+            <th>@Html.DisplayNameFor(model => model.Descriptiondeloffre)</th>
+            <th>@Html.DisplayNameFor(model => model.Datecreation)</th>
+            <th>@Html.DisplayNameFor(model => model.Datefin)</th>
+            <th>@Html.DisplayNameFor(model => model.Lieu)</th>
+            <th>@Html.DisplayNameFor(model => model.Typedeloffre)</th>
+            <th>@Html.DisplayNameFor(model => model.Typedecontrat)</th>
+            <th>@Html.DisplayNameFor(model => model.Statusdeloffre)</th>
+            <th>@Html.DisplayNameFor(model => model.Domaine)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NomDeLoffre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Descriptiondeloffre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Datecreation)</td>
+                <td>@Html.DisplayFor(modelItem => item.Datefin)</td>
+                <td>@Html.DisplayFor(modelItem => item.Lieu)</td>
+                <td>@Html.DisplayFor(modelItem => item.Typedeloffre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Typedecontrat)</td>
+                <td style="color:@(item.Statusdeloffre == "Ouvert" ? "green" : "red")">
+                    @Html.DisplayFor(modelItem => item.Statusdeloffre)
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Domaine.Nomdomaine)</td>
+                <td>
+                    @if (!User.IsInRole("Candidat")) {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                     }
+                    else
+                    {
+                        <a asp-area="" asp-controller="Candidatures" class="btn" asp-action="Create" asp-route-id="@item.Id">Postuler</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
