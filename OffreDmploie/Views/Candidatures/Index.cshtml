@@ -34,8 +34,8 @@
                                 </td>
                                 <td class="align-middle text-muted">
                                     @(item.DescriptionCondidature?.Length > 100 
-                                        ? item.DescriptionCondidature.Substring(0, 100) + "..." 
-                                        : item.DescriptionCondidature)
+                                            ? item.DescriptionCondidature.Substring(0, 100) + "..." 
+                                            : item.DescriptionCondidature)
                                 </td>
                                 <td class="align-middle">
                                     @item.Datedesoumis.ToString()
@@ -58,9 +58,12 @@
                                         <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Détails">
                                             <i class="bi bi-eye"></i>
                                         </a>
-                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary" title="Modifier">
-                                            <i class="bi bi-pencil"></i>
-                                        </a>
+                                        @if (item.Statusdecondidature == "En cours")
+                                        {
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary" title="Modifier">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                        }
                                         <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Supprimer">
                                             <i class="bi bi-trash"></i>
                                         </a>

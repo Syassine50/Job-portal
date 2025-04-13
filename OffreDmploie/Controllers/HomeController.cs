@@ -47,7 +47,10 @@ public class HomeController : Controller
                 await _context.SaveChangesAsync();
             }
         }
-        return View();
+        var applicationDbContextjojo = _context.Jobs
+                    .Include(j => j.Domaine)
+                    .Include(j => j.User);
+        return View(await applicationDbContextjojo.ToListAsync());
     }
 
     public IActionResult Privacy()
