@@ -270,3 +270,4 @@ C:\Users\yassi\source\repos\OffreDmploie\OffreDmploie\obj\Debug\net8.0\refint\Of
 C:\Users\yassi\source\repos\OffreDmploie\OffreDmploie\obj\Debug\net8.0\OffreDmploie.pdb
 C:\Users\yassi\source\repos\OffreDmploie\OffreDmploie\obj\Debug\net8.0\OffreDmploie.genruntimeconfig.cache
 C:\Users\yassi\source\repos\OffreDmploie\OffreDmploie\obj\Debug\net8.0\ref\OffreDmploie.dll
+C:\Users\yassi\source\repos\OffreDmploie\OffreDmploie\obj\Debug\net8.0\OffreDmploie.sourcelink.json

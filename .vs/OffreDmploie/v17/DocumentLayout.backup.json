@@ -3,6 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OffreDmploie/True/SqlTable/dbo.Jobs.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OffreDmploie/True/SqlTable/dbo.Candidatures.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|c:\\users\\yassi\\source\\repos\\offredmploie\\offredmploie\\controllers\\candidaturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D518942C-1318-4559-9692-7622268D5E3C}|OffreDmploie\\OffreDmploie.csproj|solutionrelative:offredmploie\\controllers\\candidaturescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,24 +60,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Candidatures [Donn\u00E9es]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OffreDmploie/True/SqlTable/dbo.Candidatures.sql",
+              "ToolTip": "dbo.Candidatures [Donn\u00E9es]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-13T13:27:36.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "dbo.Jobs [Donn\u00E9es]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/OffreDmploie/True/SqlTable/dbo.Jobs.sql",
+              "ToolTip": "dbo.Jobs [Donn\u00E9es]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-04-13T13:25:14.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobsController.cs",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\JobsController.cs",
+              "RelativeDocumentMoniker": "OffreDmploie\\Controllers\\JobsController.cs",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\JobsController.cs",
+              "RelativeToolTip": "OffreDmploie\\Controllers\\JobsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:16:17.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "OffreDmploie\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "OffreDmploie\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwDAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T13:15:36.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CandidaturesController.cs",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\CandidaturesController.cs",
               "RelativeDocumentMoniker": "OffreDmploie\\Controllers\\CandidaturesController.cs",
               "ToolTip": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Controllers\\CandidaturesController.cs",
               "RelativeToolTip": "OffreDmploie\\Controllers\\CandidaturesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T16:39:26.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Job.cs",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Models\\Job.cs",
               "RelativeDocumentMoniker": "OffreDmploie\\Models\\Job.cs",
@@ -75,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Details.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Jobs\\Details.cshtml",
@@ -87,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Edit.cshtml",
@@ -99,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Details.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Details.cshtml",
@@ -111,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Jobs\\Index.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Jobs\\Index.cshtml",
@@ -123,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Candidatures\\Index.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Candidatures\\Index.cshtml",
@@ -135,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Shared\\_LoginPartial.cshtml",
@@ -147,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "OffreDmploie\\Views\\Shared\\_Layout.cshtml",
