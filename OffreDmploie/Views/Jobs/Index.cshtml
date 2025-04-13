@@ -1,57 +1,457 @@
 ﻿@model IEnumerable<OffreDmploie.Models.Job>
-
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Offres d'emploi | Carrières";
 }
 
-<h1>Index</h1>
+<!-- CSS personnalisé -->
+<style>
+    .job-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+        border: none;
+    }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.NomDeLoffre)</th>
-            <th>@Html.DisplayNameFor(model => model.Descriptiondeloffre)</th>
-            <th>@Html.DisplayNameFor(model => model.Datecreation)</th>
-            <th>@Html.DisplayNameFor(model => model.Datefin)</th>
-            <th>@Html.DisplayNameFor(model => model.Lieu)</th>
-            <th>@Html.DisplayNameFor(model => model.Typedeloffre)</th>
-            <th>@Html.DisplayNameFor(model => model.Typedecontrat)</th>
-            <th>@Html.DisplayNameFor(model => model.Statusdeloffre)</th>
-            <th>@Html.DisplayNameFor(model => model.Domaine)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.NomDeLoffre)</td>
-                <td>@Html.DisplayFor(modelItem => item.Descriptiondeloffre)</td>
-                <td>@Html.DisplayFor(modelItem => item.Datecreation)</td>
-                <td>@Html.DisplayFor(modelItem => item.Datefin)</td>
-                <td>@Html.DisplayFor(modelItem => item.Lieu)</td>
-                <td>@Html.DisplayFor(modelItem => item.Typedeloffre)</td>
-                <td>@Html.DisplayFor(modelItem => item.Typedecontrat)</td>
-                <td style="color:@(item.Statusdeloffre == "Ouvert" ? "green" : "red")">
-                    @Html.DisplayFor(modelItem => item.Statusdeloffre)
-                </td>
-                <td>@Html.DisplayFor(modelItem => item.Domaine.Nomdomaine)</td>
-                <td>
-                    @if (!User.IsInRole("Candidat")) {
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
-                     }
-                    else
-                    {
-                        <a asp-area="" asp-controller="Candidatures" class="btn" asp-action="Create" asp-route-id="@item.Id">Postuler</a>
-                    }
-                </td>
-            </tr>
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
         }
-    </tbody>
-</table>
+
+    .job-title {
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    .job-category {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-bottom-left-radius: 8px;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .btn-apply {
+        background: linear-gradient(45deg, #3498db, #2980b9);
+        border: none;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+        transition: all 0.3s;
+    }
+
+        .btn-apply:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
+            background: linear-gradient(45deg, #2980b9, #3498db);
+        }
+
+    .page-header {
+        background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+        padding: 2.5rem 0;
+        margin-bottom: 2rem;
+        color: white;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .search-container {
+        background-color: white;
+        border-radius: 60px;
+        padding: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        margin-top: -30px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .status-badge-open {
+        background: linear-gradient(45deg, #2ecc71, #27ae60);
+    }
+
+    .status-badge-closed {
+        background: linear-gradient(45deg, #e74c3c, #c0392b);
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+
+    .job-description {
+        height: 50px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .job-meta {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+    }
+
+    .filter-dropdown {
+        border-radius: 30px;
+        padding: 0.6rem 1.2rem;
+        border: 1px solid #e1e8ed;
+        box-shadow: none;
+        font-size: 0.9rem;
+    }
+
+    .no-jobs-found {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #7f8c8d;
+    }
+</style>
+
+<!-- Bannière d'en-tête -->
+<div class="page-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-4 fw-bold mb-2">Trouvez votre prochain défi professionnel</h1>
+                <p class="lead opacity-90 mb-0">Explorez nos opportunités et rejoignez une équipe passionnée</p>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block text-end">
+                <img src="/images/career-illustration.svg" alt="Carrières" class="img-fluid" style="max-height: 200px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Barre de recherche -->
+    <div class="search-container mb-4">
+        <div class="row g-2 p-1">
+            <div class="col-lg-4 col-md-4">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-0">
+                        <i class="bi bi-search text-primary"></i>
+                    </span>
+                    <input type="text" class="form-control border-0 shadow-none" id="searchInput" placeholder="Rechercher un poste...">
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <select class="form-select filter-dropdown" id="domaineFilter">
+                    <option value="">Tous les domaines</option>
+                    @foreach (var domaine in Model.Select(j => j.Domaine.Nomdomaine).Distinct())
+                    {
+                        <option value="@domaine">@domaine</option>
+                    }
+                </select>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <select class="form-select filter-dropdown" id="contratFilter">
+                    <option value="">Type de contrat</option>
+                    @foreach (var contrat in Model.Select(j => j.Typedecontrat).Distinct())
+                    {
+                        <option value="@contrat">@contrat</option>
+                    }
+                </select>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <select class="form-select filter-dropdown" id="lieuFilter">
+                    <option value="">Tous les lieux</option>
+                    @foreach (var lieu in Model.Select(j => j.Lieu).Distinct())
+                    {
+                        <option value="@lieu">@lieu</option>
+                    }
+                </select>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <select class="form-select filter-dropdown" id="statusFilter">
+                    <option value="">Tous les statuts</option>
+                    <option value="Ouvert">Offres ouvertes</option>
+                    <option value="Fermé">Offres fermées</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- Statistiques des offres -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="mb-0 fw-bold"><span id="jobCount">@Model.Count()</span> offres disponibles</h2>
+            <p class="text-muted mb-0">Dernière mise à jour : @DateTime.Now.ToString("dd MMMM yyyy")</p>
+        </div>
+        @if (!User.IsInRole("Candidat"))
+        {
+            <a asp-action="Create" class="btn btn-apply py-2 px-4 rounded-pill fw-bold">
+                <i class="bi bi-plus-circle me-2"></i> Publier une offre
+            </a>
+        }
+    </div>
+
+    <!-- Liste des offres -->
+    <div class="row g-4 mb-5" id="jobsContainer">
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                    <div class="col-xl-4 col-lg-6 job-item"
+                     data-domaine="@item.Domaine.Nomdomaine"
+                     data-contrat="@item.Typedecontrat"
+                     data-lieu="@item.Lieu"
+                     data-status="@item.Statusdeloffre">
+
+                        <div class="card job-card shadow-sm h-100 position-relative">
+                            <span class="job-category badge @(item.Statusdeloffre == "Ouvert" ? "status-badge-open" : "status-badge-closed") text-white">
+                                @item.Statusdeloffre
+                            </span>
+                    <a asp-action="Details" asp-route-id="@item.Id"  >
+
+                            <div class="card-body p-4">
+
+                                <h5 class="job-title mb-3">@item.NomDeLoffre</h5>
+                                <p class="job-description text-muted mb-3">@item.Descriptiondeloffre</p>
+
+                                <!-- Informations clés -->
+                                <div class="mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="feature-icon bg-primary bg-opacity-10 text-primary">
+                                            <i class="bi bi-building"></i>
+                                        </div>
+                                        <span>@item.Domaine.Nomdomaine</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="feature-icon bg-success bg-opacity-10 text-success">
+                                            <i class="bi bi-briefcase"></i>
+                                        </div>
+                                        <span>@item.Typedecontrat - @item.Typedeloffre</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="feature-icon bg-info bg-opacity-10 text-info">
+                                            <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <span>@item.Lieu</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="job-meta">
+                                        <i class="bi bi-calendar-check me-1"></i> Date limite :
+                                        <strong>@item.Datefin.ToString("dd MMM yyyy")</strong>
+                                    </div>
+                                    <div>
+                                        @if (!User.IsInRole("Candidat"))
+                                        {
+                                            <div class="action-buttons">
+                                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning btn-sm me-1" title="Modifier">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm me-1" title="Détails">
+                                                    <i class="bi bi-eye"></i>
+                                                </a>
+                                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm" title="Supprimer">
+                                                    <i class="bi bi-trash"></i>
+                                                </a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Candidatures" asp-action="Create" asp-route-id="@item.Id"
+                                               class="btn btn-primary rounded-pill px-4 py-2 fw-bold @(item.Statusdeloffre != "Ouvert" ? "disabled" : "")">
+                                                <i class="bi bi-send me-2"></i>Postuler
+                                            </a>
+                                        }
+                                    </div>
+                                </div>
+							</div>
+						</a>
+                        </div>
+
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12">
+                <div class="no-jobs-found">
+                    <i class="bi bi-search fs-1 mb-3"></i>
+                    <h3>Aucune offre d'emploi disponible</h3>
+                    <p>Aucune offre ne correspond à vos critères de recherche.</p>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Message aucun résultat -->
+    <div id="noResults" class="no-jobs-found d-none">
+        <i class="bi bi-search fs-1 mb-3"></i>
+        <h3>Aucun résultat trouvé</h3>
+        <p>Veuillez modifier vos critères de recherche et réessayer.</p>
+        <button id="resetFilters" class="btn btn-outline-primary rounded-pill mt-2">
+            <i class="bi bi-arrow-counterclockwise me-2"></i>Réinitialiser les filtres
+        </button>
+    </div>
+
+    <!-- Pagination 
+    <nav aria-label="Pagination des offres d'emploi">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link rounded-start" href="#" tabindex="-1">Précédent</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link rounded-end" href="#">Suivant</a>
+            </li>
+        </ul>
+	</nav>-->
+</div>
+
+<!-- Section supplémentaire avec statistiques et CTA -->
+<div class="bg-light py-5 mt-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="fw-bold mb-4">Pourquoi nous rejoindre ?</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-graph-up-arrow text-primary fs-1 mb-3"></i>
+                                <h4>Évolution de carrière</h4>
+                                <p class="mb-0 text-muted">Des parcours professionnels personnalisés pour développer vos compétences.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-people-fill text-primary fs-1 mb-3"></i>
+                                <h4>Culture collaborative</h4>
+                                <p class="mb-0 text-muted">Rejoignez une équipe dynamique et passionnée par l'innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-award text-primary fs-1 mb-3"></i>
+                                <h4>Reconnaissance</h4>
+                                <p class="mb-0 text-muted">Vos contributions sont valorisées et récompensées à leur juste valeur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-gear-wide-connected text-primary fs-1 mb-3"></i>
+                                <h4>Projets innovants</h4>
+                                <p class="mb-0 text-muted">Travaillez sur des projets stimulants qui façonnent l'avenir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold mb-4">Restez informé</h3>
+                        <p>Recevez nos nouvelles offres d'emploi directement dans votre boîte mail.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg rounded-pill" placeholder="Votre adresse email">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select rounded-pill">
+                                    <option selected>Domaines d'intérêt</option>
+                                    @foreach (var domaine in Model.Select(j => j.Domaine.Nomdomaine).Distinct())
+                                    {
+                                        <option value="@domaine">@domaine</option>
+                                    }
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-apply w-100 py-3 rounded-pill fw-bold">
+                                <i class="bi bi-bell me-2"></i>S'abonner aux alertes
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Filtrage dynamique
+            function filterJobs() {
+                const searchTerm = $('#searchInput').val().toLowerCase();
+                const domaine = $('#domaineFilter').val();
+                const contrat = $('#contratFilter').val();
+                const lieu = $('#lieuFilter').val();
+                const status = $('#statusFilter').val();
+
+                let visibleCount = 0;
+
+                $('.job-item').each(function() {
+                    const jobCard = $(this);
+                    const jobTitle = jobCard.find('.job-title').text().toLowerCase();
+                    const jobDescription = jobCard.find('.job-description').text().toLowerCase();
+                    const jobDomaine = jobCard.data('domaine');
+                    const jobContrat = jobCard.data('contrat');
+                    const jobLieu = jobCard.data('lieu');
+                    const jobStatus = jobCard.data('status');
+
+                    const matchesSearch = jobTitle.includes(searchTerm) || jobDescription.includes(searchTerm);
+                    const matchesDomaine = domaine === '' || jobDomaine === domaine;
+                    const matchesContrat = contrat === '' || jobContrat === contrat;
+                    const matchesLieu = lieu === '' || jobLieu === lieu;
+                    const matchesStatus = status === '' || jobStatus === status;
+
+                    if (matchesSearch && matchesDomaine && matchesContrat && matchesLieu && matchesStatus) {
+                        jobCard.removeClass('d-none');
+                        visibleCount++;
+                    } else {
+                        jobCard.addClass('d-none');
+                    }
+                });
+
+                // Mise à jour du compteur
+                $('#jobCount').text(visibleCount);
+
+                // Afficher/masquer le message "aucun résultat"
+                if (visibleCount === 0) {
+                    $('#jobsContainer').addClass('d-none');
+                    $('#noResults').removeClass('d-none');
+                } else {
+                    $('#jobsContainer').removeClass('d-none');
+                    $('#noResults').addClass('d-none');
+                }
+            }
+
+            // Événements
+            $('#searchInput, #domaineFilter, #contratFilter, #lieuFilter, #statusFilter').on('input change', filterJobs);
+
+            // Réinitialiser les filtres
+            $('#resetFilters').click(function() {
+                $('#searchInput').val('');
+                $('#domaineFilter, #contratFilter, #lieuFilter, #statusFilter').val('');
+                filterJobs();
+            });
+
+            // Animation au défilement
+            $(window).on('scroll', function() {
+                $('.job-card').each(function() {
+                    const cardPosition = $(this).offset().top;
+                    const scrollPosition = $(window).scrollTop() + $(window).height();
+
+                    if (scrollPosition > cardPosition + 100) {
+                        $(this).addClass('animate__animated animate__fadeInUp');
+                    }
+                });
+            });
+        });
+    </script>
+}

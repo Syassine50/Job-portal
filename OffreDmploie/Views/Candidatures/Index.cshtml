@@ -1,59 +1,100 @@
 ﻿@model IEnumerable<OffreDmploie.Models.Candidature>
-
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">Mes Candidatures</h1>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-2"></i>Nouvelle Candidature
+        </a>
+    </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="fw-bold">Offre</th>
+                        <th class="fw-bold">Description</th>
+                        <th class="fw-bold">Date de Postulation</th>
+                        <th class="fw-bold">Statut</th>
+                        <th class="fw-bold text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="align-middle fw-semibold">
+                                    @Html.DisplayFor(modelItem => item.Job.NomDeLoffre)
+                                </td>
+                                <td class="align-middle text-muted">
+                                    @(item.DescriptionCondidature?.Length > 100 
+                                        ? item.DescriptionCondidature.Substring(0, 100) + "..." 
+                                        : item.DescriptionCondidature)
+                                </td>
+                                <td class="align-middle">
+                                    @item.Datedesoumis.ToString()
+                                </td>
+                                <td class="align-middle">
+                                    @{
+                                        var statusClass = item.Statusdecondidature switch
+                                        {
+                                            "En cours" => "bg-warning text-dark",
+                                            "Accepée" => "bg-success text-white",
+                                            _ => "bg-danger text-white"
+                                        };
+                                    }
+                                    <span class="badge rounded-pill @statusClass px-3 py-2">
+                                        @Html.DisplayFor(modelItem => item.Statusdecondidature)
+                                    </span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Détails">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary" title="Modifier">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Supprimer">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center py-4">
+                                <div class="text-muted">
+                                    <i class="bi bi-inbox fs-1 d-block mb-3"></i>
+                                    <p>Aucune candidature trouvée</p>
+                                    <a asp-action="Create" class="btn btn-sm btn-primary mt-2">
+                                        Créer une candidature
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-            <th>
-                Nom de l'offre
-            </th>
-            <th>
-                Description de votre candidature
-            </th>
-            <th>
-                Date de Postulation 
-            </th>
-            <th>
-                Status de votre Candidature
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Job.NomDeLoffre)
-                </td>
-
-                
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescriptionCondidature)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Datedesoumis)
-                </td>    
-
-                <td style="color:@(item.Statusdecondidature == "En cours" ? "#FFC300" :
-                                    item.Statusdecondidature == "Accepée" ? "green" :  "red")">
-                    @Html.DisplayFor(modelItem => item.Statusdecondidature)
-                </td>
-                <td>
-                
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <style>
+        .table th, .table td {
+            padding: 1rem;
+        }
+        
+        .badge {
+            font-weight: 500;
+        }
+    </style>

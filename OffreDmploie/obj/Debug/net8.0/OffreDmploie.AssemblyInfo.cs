@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OffreDmploie")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc8238870b85579f2d9100bdd3f75fefa67d88be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e49eeac9f461e21bd4ba8ea90a98bb0fd1cd9309")]
 [assembly: System.Reflection.AssemblyProductAttribute("OffreDmploie")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OffreDmploie")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

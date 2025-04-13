@@ -134,7 +134,8 @@ namespace OffreDmploie.Controllers
       
 
             candidature.IdJob = id;
-            candidature.IdUser = user.Id; 
+            candidature.IdUser = user.Id;
+            var job = _context.Jobs.Find(id);
 
             if (Resume != null &&Resume.Length > 0 && ModelState.IsValid)
             {
@@ -149,7 +150,7 @@ namespace OffreDmploie.Controllers
             }
             ViewData["IdJob"] = new SelectList(_context.Jobs, "Id", "Id", candidature.IdJob);
             ViewData["IdUser"] = new SelectList(_context.Users, "Id", "Id", candidature.IdUser);
-            return View(candidature);
+            return View(job );
         }
         // GET: Candidatures/Edit/5
         public async Task<IActionResult> Edit(int? id)

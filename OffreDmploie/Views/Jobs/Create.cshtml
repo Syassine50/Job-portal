@@ -1,139 +1,204 @@
 ﻿@model OffreDmploie.Models.Job
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Créer une offre d'emploi";
 }
 
-<h1>Create</h1>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-primary text-white p-4">
+                    <h2 class="fw-bold mb-0"><i class="bi bi-briefcase me-2"></i>Créer une nouvelle offre d'emploi</h2>
+                    <p class="mb-0 mt-2 opacity-75">Complétez le formulaire ci-dessous pour publier une nouvelle opportunité.</p>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Create" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3" role="alert"></div>
 
-<h4>Job</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomDeLoffre" class="control-label"></label>
-                <input asp-for="NomDeLoffre" class="form-control" />
-                <span asp-validation-for="NomDeLoffre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descriptiondeloffre" class="control-label"></label>
-                <input asp-for="Descriptiondeloffre" class="form-control" />
-                <span asp-validation-for="Descriptiondeloffre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Datefin" class="control-label"></label>
-                <input asp-for="Datefin" class="form-control" type="date"/>
-                <span asp-validation-for="Datefin" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Lieu" class="control-label">Pays</label>
-                <select asp-for ="Lieu" class="form-control">
-                    <option value="">-- Sélectionnez un pays --</option>
-                    <option value="Afghanistan">🇦🇫 Afghanistan</option>
-                    <option value="Albanie">🇦🇱 Albanie</option>
-                    <option value="Algérie">🇩🇿 Algérie</option>
-                    <option value="Andorre">🇦🇩 Andorre</option>
-                    <option value="Angola">🇦🇴 Angola</option>
-                    <option value="Argentine">🇦🇷 Argentine</option>
-                    <option value="Arménie">🇦🇲 Arménie</option>
-                    <option value="Australie">🇦🇺 Australie</option>
-                    <option value="Autriche">🇦🇹 Autriche</option>
-                    <option value="Azerbaïdjan">🇦🇿 Azerbaïdjan</option>
-                    <option value="Belgique">🇧🇪 Belgique</option>
-                    <option value="Bénin">🇧🇯 Bénin</option>
-                    <option value="Brésil">🇧🇷 Brésil</option>
-                    <option value="Burkina Faso">🇧🇫 Burkina Faso</option>
-                    <option value="Canada">🇨🇦 Canada</option>
-                    <option value="Chili">🇨🇱 Chili</option>
-                    <option value="Chine">🇨🇳 Chine</option>
-                    <option value="Colombie">🇨🇴 Colombie</option>
-                    <option value="Croatie">🇭🇷 Croatie</option>
-                    <option value="Danemark">🇩🇰 Danemark</option>
-                    <option value="Égypte">🇪🇬 Égypte</option>
-                    <option value="France">🇫🇷 France</option>
-                    <option value="Allemagne">🇩🇪 Allemagne</option>
-                    <option value="Grèce">🇬🇷 Grèce</option>
-                    <option value="Hongrie">🇭🇺 Hongrie</option>
-                    <option value="Inde">🇮🇳 Inde</option>
-                    <option value="Indonésie">🇮🇩 Indonésie</option>
-                    <option value="Iran">🇮🇷 Iran</option>
-                    <option value="Irak">🇮🇶 Irak</option>
-                    <option value="Irlande">🇮🇪 Irlande</option>
-                    <option value="Israël">🇮🇱 Israël</option>
-                    <option value="Italie">🇮🇹 Italie</option>
-                    <option value="Japon">🇯🇵 Japon</option>
-                    <option value="Jordanie">🇯🇴 Jordanie</option>
-                    <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
-                    <option value="Kenya">🇰🇪 Kenya</option>
-                    <option value="Corée du Sud">🇰🇷 Corée du Sud</option>
-                    <option value="Mexique">🇲🇽 Mexique</option>
-                    <option value="Maroc">🇲🇦 Maroc</option>
-                    <option value="Pays-Bas">🇳🇱 Pays-Bas</option>
-                    <option value="Nigéria">🇳🇬 Nigéria</option>
-                    <option value="Norvège">🇳🇴 Norvège</option>
-                    <option value="Pakistan">🇵🇰 Pakistan</option>
-                    <option value="Pologne">🇵🇱 Pologne</option>
-                    <option value="Portugal">🇵🇹 Portugal</option>
-                    <option value="Qatar">🇶🇦 Qatar</option>
-                    <option value="Roumanie">🇷🇴 Roumanie</option>
-                    <option value="Russie">🇷🇺 Russie</option>
-                    <option value="Arabie Saoudite">🇸🇦 Arabie Saoudite</option>
-                    <option value="Sénégal">🇸🇳 Sénégal</option>
-                    <option value="Serbie">🇷🇸 Serbie</option>
-                    <option value="Singapour">🇸🇬 Singapour</option>
-                    <option value="Afrique du Sud">🇿🇦 Afrique du Sud</option>
-                    <option value="Espagne">🇪🇸 Espagne</option>
-                    <option value="Suède">🇸🇪 Suède</option>
-                    <option value="Suisse">🇨🇭 Suisse</option>
-                    <option value="Syrie">🇸🇾 Syrie</option>
-                    <option value="Tunisie">🇹🇳 Tunisie</option>
-                    <option value="Turquie">🇹🇷 Turquie</option>
-                    <option value="Ukraine">🇺🇦 Ukraine</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Typedeloffre" class="control-label"></label>
-                <select asp-for="Typedeloffre" class="form-control">
-                    <option value="">-- Sélectionner un type d'offre --</option>
-                    <option value="Intérim">Intérim</option>
-                    <option value="Service Civique">Service Civique</option>
-                    <option value="VIE">VIE</option>
-                    <option value="Temps partiel">Temps partiel</option>
-                    <option value="Temps plein">Temps plein</option>
-                </select>
-                <span asp-validation-for="Typedeloffre" class="text-danger"></span>
-            </div>
+                        <div class="row g-3">
+                            <!-- Informations principales -->
+                            <div class="col-12 mb-3">
+                                <h5 class="border-start border-4 border-primary ps-3 mb-4">Informations principales</h5>
+                            </div>
 
-            <div class="form-group">
-                <label asp-for="Typedecontrat" class="control-label"></label>
-                <select asp-for="Typedecontrat" class="form-control">
-                    <option value="">-- Sélectionner un type de contrat --</option>
-                    <option value="CDI">CDI</option>
-                    <option value="CDD">CDD</option>
-                    <option value="Stage">Stage</option>
-                    <option value="Freelance">Freelance</option>
-                    <option value="Alternance">Alternance</option>
-                </select>
-                <span asp-validation-for="Typedecontrat" class="text-danger"></span>
-            </div>
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="NomDeLoffre" class="form-label fw-semibold">Intitulé du poste</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-bookmark-star"></i></span>
+                                    <input asp-for="NomDeLoffre" class="form-control form-control-lg" placeholder="Ex: Développeur Web Full Stack" />
+                                </div>
+                                <span asp-validation-for="NomDeLoffre" class="text-danger small"></span>
+                            </div>
 
-            <div class="form-group">
-                <label asp-for="IdDomaine" class="control-label"></label>
-                <select asp-for="IdDomaine" class ="form-control" asp-items="ViewBag.IdDomaine"></select>
+                            <div class="col-md-12 mb-4">
+                                <label asp-for="Descriptiondeloffre" class="form-label fw-semibold">Description du poste</label>
+                                <textarea asp-for="Descriptiondeloffre" class="form-control" rows="5" placeholder="Décrivez les responsabilités, qualifications et avantages du poste..."></textarea>
+                                <span asp-validation-for="Descriptiondeloffre" class="text-danger small"></span>
+                                <div class="form-text">Une description détaillée augmente la qualité des candidatures reçues.</div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <!-- Détails du poste -->
+                            <div class="col-12 mb-3">
+                                <h5 class="border-start border-4 border-primary ps-3 mb-4">Détails du poste</h5>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Lieu" class="form-label fw-semibold">Localisation</label>
+                                <select asp-for="Lieu" class="form-select">
+                                    <option value="">-- Sélectionnez un pays --</option>
+                                    <option value="Afghanistan">🇦🇫 Afghanistan</option>
+                                    <option value="Albanie">🇦🇱 Albanie</option>
+                                    <option value="Algérie">🇩🇿 Algérie</option>
+                                    <option value="Andorre">🇦🇩 Andorre</option>
+                                    <option value="Angola">🇦🇴 Angola</option>
+                                    <option value="Argentine">🇦🇷 Argentine</option>
+                                    <option value="Arménie">🇦🇲 Arménie</option>
+                                    <option value="Australie">🇦🇺 Australie</option>
+                                    <option value="Autriche">🇦🇹 Autriche</option>
+                                    <option value="Azerbaïdjan">🇦🇿 Azerbaïdjan</option>
+                                    <option value="Belgique">🇧🇪 Belgique</option>
+                                    <option value="Bénin">🇧🇯 Bénin</option>
+                                    <option value="Brésil">🇧🇷 Brésil</option>
+                                    <option value="Burkina Faso">🇧🇫 Burkina Faso</option>
+                                    <option value="Canada">🇨🇦 Canada</option>
+                                    <option value="Chili">🇨🇱 Chili</option>
+                                    <option value="Chine">🇨🇳 Chine</option>
+                                    <option value="Colombie">🇨🇴 Colombie</option>
+                                    <option value="Croatie">🇭🇷 Croatie</option>
+                                    <option value="Danemark">🇩🇰 Danemark</option>
+                                    <option value="Égypte">🇪🇬 Égypte</option>
+                                    <option value="France">🇫🇷 France</option>
+                                    <option value="Allemagne">🇩🇪 Allemagne</option>
+                                    <option value="Grèce">🇬🇷 Grèce</option>
+                                    <option value="Hongrie">🇭🇺 Hongrie</option>
+                                    <option value="Inde">🇮🇳 Inde</option>
+                                    <option value="Indonésie">🇮🇩 Indonésie</option>
+                                    <option value="Iran">🇮🇷 Iran</option>
+                                    <option value="Irak">🇮🇶 Irak</option>
+                                    <option value="Irlande">🇮🇪 Irlande</option>
+                                    <option value="Israël">🇮🇱 Israël</option>
+                                    <option value="Italie">🇮🇹 Italie</option>
+                                    <option value="Japon">🇯🇵 Japon</option>
+                                    <option value="Jordanie">🇯🇴 Jordanie</option>
+                                    <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
+                                    <option value="Kenya">🇰🇪 Kenya</option>
+                                    <option value="Corée du Sud">🇰🇷 Corée du Sud</option>
+                                    <option value="Mexique">🇲🇽 Mexique</option>
+                                    <option value="Maroc">🇲🇦 Maroc</option>
+                                    <option value="Pays-Bas">🇳🇱 Pays-Bas</option>
+                                    <option value="Nigéria">🇳🇬 Nigéria</option>
+                                    <option value="Norvège">🇳🇴 Norvège</option>
+                                    <option value="Pakistan">🇵🇰 Pakistan</option>
+                                    <option value="Pologne">🇵🇱 Pologne</option>
+                                    <option value="Portugal">🇵🇹 Portugal</option>
+                                    <option value="Qatar">🇶🇦 Qatar</option>
+                                    <option value="Roumanie">🇷🇴 Roumanie</option>
+                                    <option value="Russie">🇷🇺 Russie</option>
+                                    <option value="Arabie Saoudite">🇸🇦 Arabie Saoudite</option>
+                                    <option value="Sénégal">🇸🇳 Sénégal</option>
+                                    <option value="Serbie">🇷🇸 Serbie</option>
+                                    <option value="Singapour">🇸🇬 Singapour</option>
+                                    <option value="Afrique du Sud">🇿🇦 Afrique du Sud</option>
+                                    <option value="Espagne">🇪🇸 Espagne</option>
+                                    <option value="Suède">🇸🇪 Suède</option>
+                                    <option value="Suisse">🇨🇭 Suisse</option>
+                                    <option value="Syrie">🇸🇾 Syrie</option>
+                                    <option value="Tunisie">🇹🇳 Tunisie</option>
+                                    <option value="Turquie">🇹🇷 Turquie</option>
+                                    <option value="Ukraine">🇺🇦 Ukraine</option>
+                                </select>
+                                <span asp-validation-for="Lieu" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Datefin" class="form-label fw-semibold">Date limite de candidature</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-calendar-event"></i></span>
+                                    <input asp-for="Datefin" class="form-control" type="date" />
+                                </div>
+                                <span asp-validation-for="Datefin" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Typedeloffre" class="form-label fw-semibold">Type de poste</label>
+                                <select asp-for="Typedeloffre" class="form-select">
+                                    <option value="">-- Sélectionner un type d'offre --</option>
+                                    <option value="Intérim">Intérim</option>
+                                    <option value="Service Civique">Service Civique</option>
+                                    <option value="VIE">VIE</option>
+                                    <option value="Temps partiel">Temps partiel</option>
+                                    <option value="Temps plein">Temps plein</option>
+                                </select>
+                                <span asp-validation-for="Typedeloffre" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Typedecontrat" class="form-label fw-semibold">Type de contrat</label>
+                                <select asp-for="Typedecontrat" class="form-select">
+                                    <option value="">-- Sélectionner un type de contrat --</option>
+                                    <option value="CDI">CDI</option>
+                                    <option value="CDD">CDD</option>
+                                    <option value="Stage">Stage</option>
+                                    <option value="Freelance">Freelance</option>
+                                    <option value="Alternance">Alternance</option>
+                                </select>
+                                <span asp-validation-for="Typedecontrat" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-12 mb-4">
+                                <label asp-for="IdDomaine" class="form-label fw-semibold">Domaine d'activité</label>
+                                <select asp-for="IdDomaine" class="form-select" asp-items="ViewBag.IdDomaine"></select>
+                                <span asp-validation-for="IdDomaine" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left me-1"></i> Retour à la liste
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-check-circle me-2"></i> Publier l'offre
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Amélioration de l'expérience utilisateur
+        $(document).ready(function() {
+            // Animation des labels
+            $(".form-control, .form-select").focus(function() {
+                $(this).parent().find("label").addClass("text-primary");
+            }).blur(function() {
+                $(this).parent().find("label").removeClass("text-primary");
+            });
+
+            // Validation Bootstrap améliorée
+            (function () {
+                'use strict';
+                var forms = document.querySelectorAll('.needs-validation');
+                Array.prototype.slice.call(forms).forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+        });
+    </script>
+} 

@@ -4,35 +4,209 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 rounded-3">
+                <div class="card-header bg-gradient-primary text-white p-4">
+                    <h2 class="fw-bold mb-0"><i class="bi bi-person-badge me-2"></i>Postuler à cette offre</h2>
+                    <p class="mb-0 mt-2 opacity-75">Complétez votre candidature pour cette opportunité professionnelle</p>
+                </div>
 
-<h4>Candidature</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="DescriptionCondidature" class="control-label"></label>
-                <input asp-for="DescriptionCondidature" class="form-control" />
-                <span asp-validation-for="DescriptionCondidature" class="text-danger"></span>
+                <div class="card-body p-4">
+                    <!-- Information sur l'offre (à compléter avec les données de l'offre) -->
+                    
+                    <form asp-action="Create" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger rounded-3" role="alert"></div>
+
+                        <!-- Lettre de motivation -->
+                        <div class="mb-4">
+                            <label asp-for="DescriptionCondidature" class="form-label fw-semibold">Lettre de motivation</label>
+                            <textarea asp-for="DescriptionCondidature" class="form-control" rows="6"
+                                      placeholder="Présentez-vous et expliquez pourquoi vous êtes intéressé par ce poste et ce que vous pouvez apporter..."></textarea>
+                            <span asp-validation-for="DescriptionCondidature" class="text-danger small"></span>
+                            <div class="form-text">
+                                <i class="bi bi-info-circle me-1"></i> Expliquez pourquoi votre profil correspond à ce poste et ce qui vous motive à rejoindre l'entreprise.
+                            </div>
+                        </div>
+
+                        <!-- CV Upload -->
+                        <div class="mb-4">
+                            <label asp-for="Resume" class="form-label fw-semibold">Curriculum Vitae (CV)</label>
+                            <div class="card bg-light border-dashed rounded-3">
+                                <div class="card-body p-3">
+                                    <div class="text-center py-3" id="drop-area">
+                                        <i class="bi bi-file-earmark-text fs-1 text-primary mb-2"></i>
+                                        <h5 class="fw-bold">Glissez votre CV ici</h5>
+                                        <p class="text-muted mb-3">ou</p>
+                                        <label for="Resume" class="btn btn-outline-primary px-4">
+                                            <i class="bi bi-upload me-2"></i>Sélectionner un fichier
+                                        </label>
+                                        <input asp-for="Resume" class="form-control d-none" type="file" id="Resume" accept=".pdf,.doc,.docx" />
+                                        <p class="form-text mt-2">Formats acceptés: PDF, DOC, DOCX (max 5MB)</p>
+                                    </div>
+                                    <div id="file-info" class="d-none">
+                                        <div class="d-flex align-items-center p-2 bg-white rounded">
+                                            <i class="bi bi-file-pdf text-danger fs-4 me-3"></i>
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-0 text-truncate" id="file-name"></h6>
+                                                <small class="text-muted" id="file-size"></small>
+                                            </div>
+                                            <button type="button" class="btn-close" id="remove-file" aria-label="Supprimer"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Resume" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Informations complémentaires (optionnel) -->
+                        <div class="mb-4">
+                            <h5 class="border-start border-4 border-primary ps-3 mb-3">Informations complémentaires</h5>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Comment avez-vous découvert cette offre ?</label>
+                                <select class="form-select">
+                                    <option value="">-- Sélectionnez une option --</option>
+                                    <option value="Site web">Site web de l'entreprise</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="Indeed">Indeed</option>
+                                    <option value="Recommandation">Recommandation</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Disponibilité</label>
+                                <input type="date" class="form-control" placeholder="Date de disponibilité" />
+                                <div class="form-text">Date à laquelle vous pourriez commencer si votre candidature est retenue.</div>
+                            </div>
+                        </div>
+
+                        <!-- Consentement RGPD -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="gdprConsent" required>
+                            <label class="form-check-label" for="gdprConsent">
+                                J'accepte que mes données personnelles soient traitées dans le cadre de ma candidature conformément à la politique de confidentialité.
+                            </label>
+                            <div class="invalid-feedback">
+                                Vous devez accepter les conditions pour soumettre votre candidature.
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left me-1"></i> Retour aux offres
+                            </a>
+                            <button type="submit" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-send me-2"></i> Envoyer ma candidature
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Resume" class="control-label"></label>
-                <input asp-for="Resume" class="form-control" type="file" />
-                <span asp-validation-for="Resume" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function() {
+            // Gestion de l'upload de fichier
+            $('#Resume').change(function(e) {
+                var file = e.target.files[0];
+                if (file) {
+                    var fileSize = (file.size / 1024 / 1024).toFixed(2);
+                    $('#file-name').text(file.name);
+                    $('#file-size').text(fileSize + ' MB');
+                    $('#file-info').removeClass('d-none');
+                    $('#drop-area').addClass('d-none');
+                }
+            });
+
+            // Suppression du fichier
+            $('#remove-file').click(function() {
+                $('#Resume').val('');
+                $('#file-info').addClass('d-none');
+                $('#drop-area').removeClass('d-none');
+            });
+
+            // Drag & Drop
+            const dropArea = document.getElementById('drop-area');
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight() {
+                dropArea.classList.add('bg-primary', 'bg-opacity-10');
+            }
+
+            function unhighlight() {
+                dropArea.classList.remove('bg-primary', 'bg-opacity-10');
+            }
+
+            dropArea.addEventListener('drop', handleDrop, false);
+
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                if (files.length) {
+                    document.getElementById('Resume').files = files;
+                    $('#Resume').trigger('change');
+                }
+            }
+
+            // Validation du formulaire
+            (function () {
+                'use strict';
+                var forms = document.querySelectorAll('.needs-validation');
+                Array.prototype.slice.call(forms).forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+        });
+    </script>
+
+    <style>
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+        }
+
+        .border-dashed {
+            border-style: dashed !important;
+        }
+
+        #drop-area {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+            #drop-area:hover {
+                background-color: rgba(52, 152, 219, 0.1);
+            }
+    </style>
 }
