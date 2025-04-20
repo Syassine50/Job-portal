@@ -9,7 +9,7 @@
             <h1 class="fw-bold mb-1">Gestion des Utilisateurs</h1>
             <p class="text-muted">Administration et vue d'ensemble de tous les utilisateurs du système</p>
         </div>
-        <a asp-action="Create" class="btn btn-primary">
+            <a asp-area="Identity" asp-page="/Account/Register">
             <i class="bi bi-person-plus me-2"></i>Nouvel Utilisateur
         </a>
     </div>
@@ -23,21 +23,6 @@
                         <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
                         <input type="text" id="searchUser" class="form-control" placeholder="Rechercher un utilisateur...">
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <select id="filterRole" class="form-select">
-                        <option value="">Tous les rôles</option>
-                        <option value="admin">Administrateurs</option>
-                        <option value="company">Entreprises</option>
-                        <option value="candidate">Candidats</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <select id="filterStatus" class="form-select">
-                        <option value="">Tous les statuts</option>
-                        <option value="active">Actifs</option>
-                        <option value="locked">Verrouillés</option>
-                    </select>
                 </div>
             </div>
         </div>
@@ -134,17 +119,7 @@
         });
     });
 
-    // Fonction pour basculer le statut de l'utilisateur (verrouillé/déverrouillé)
-    function toggleUserStatus(userId) {
-        // Cette fonction serait connectée à votre controller
-        // Ici, nous montrons juste une alerte pour démontrer le concept
-        alert(`Status modifié pour l'utilisateur ${userId}`);
-    }
-
-    // Fonction pour filtrer par rôle et statut
-    document.getElementById('filterRole').addEventListener('change', filterUsers);
-    document.getElementById('filterStatus').addEventListener('change', filterUsers);
-
+  
     function filterUsers() {
         // Logique de filtrage à implémenter selon vos besoins
         console.log("Filtrage des utilisateurs...");

@@ -5,22 +5,36 @@
 
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="fw-bold">Mes Candidatures</h1>
-        <a asp-action="Create" class="btn btn-primary">
-            <i class="bi bi-plus-circle me-2"></i>Nouvelle Candidature
-        </a>
+        @if (User.IsInRole("Candidat"))
+        {
+            <h1 class="fw-bold">Mes Candidatures</h1>
+
+            <a asp-controller="Jobs" asp-action="Index" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-2"></i>Nouvelle Candidature
+            </a>
+        }
+        else
+        {
+            <h1 class="fw-bold">Les Candidatures</h1>
+        }
     </div>
 
     <div class="card shadow-sm">
         <div class="card-body p-0">
             <table class="table table-hover mb-0">
                 <thead class="table-light">
-                    <tr>
+					<tr>
+						@if (User.IsInRole("Admin"))
+						{
+
+							<th class="fw-bold">Nom De candidat</th>
+						}
                         <th class="fw-bold">Offre</th>
                         <th class="fw-bold">Description</th>
                         <th class="fw-bold">Date de Postulation</th>
                         <th class="fw-bold">Statut</th>
                         <th class="fw-bold text-center">Actions</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +43,13 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                @if (User.IsInRole("Admin"))
+                                {
+
+                                    <td class="align-middle fw-semibold">
+                                        @Html.DisplayFor(modelItem => item.User.Nometprenom)
+                                    </td>
+                                }
                                 <td class="align-middle fw-semibold">
                                     @Html.DisplayFor(modelItem => item.Job.NomDeLoffre)
                                 </td>
@@ -79,7 +100,7 @@
                                 <div class="text-muted">
                                     <i class="bi bi-inbox fs-1 d-block mb-3"></i>
                                     <p>Aucune candidature trouvée</p>
-                                    <a  asp-controller="User" asp-action="Index" class="btn btn-sm btn-primary mt-2">
+                                    <a  asp-controller="Jobs" asp-action="Index" class="btn btn-sm btn-primary mt-2">
                                         Créer une candidature
                                     </a>
                                 </div>

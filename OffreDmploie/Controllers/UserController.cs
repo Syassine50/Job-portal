@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,16 +16,19 @@ namespace OffreDmploie.Controllers
     public class UserController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public UserController(ApplicationDbContext context)
+        public UserController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: User
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            var users = await _userManager.GetUsersInRoleAsync("Entreprise");
+            return View(users);
         }
 
         // GET: User/Details/5

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xjsEKTgcPcFwhyHuB1zuju1M/R5M0vs3GURotli5Pt8=",
+  "Hash": "h0TlrI1dYHV0Y7nYFqr/99vFbncvrtF8m3W8DfmDruc=",
   "Source": "OffreDmploie",
   "BasePath": "_content/OffreDmploie",
   "Mode": "Default",
@@ -1674,6 +1674,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
+    },
+    {
+      "Identity": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.css",
+      "SourceId": "OffreDmploie",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\",
+      "BasePath": "_content/OffreDmploie",
+      "RelativePath": "css/select2-bootstrap-5-theme#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9t6rxls2rs",
+      "Integrity": "PdA95MFDvPdYlnfpIczR/wkxW/Us9YI/lQR3OkU80OY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\select2-bootstrap-5-theme.css"
+    },
+    {
+      "Identity": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.min.css",
+      "SourceId": "OffreDmploie",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\",
+      "BasePath": "_content/OffreDmploie",
+      "RelativePath": "css/select2-bootstrap-5-theme.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wfe5v7adcw",
+      "Integrity": "XLNUEfzPGHBeStES2DbLUURZ3e793BablwzJlYj6W2Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\select2-bootstrap-5-theme.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.css",
+      "SourceId": "OffreDmploie",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\",
+      "BasePath": "_content/OffreDmploie",
+      "RelativePath": "css/select2-bootstrap-5-theme.rtl#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4a7ercfsxc",
+      "Integrity": "XLffXXWZpoYoOoO7GfXAoBD7n/KAY+IzKgxoJkQ+7MM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\select2-bootstrap-5-theme.rtl.css"
+    },
+    {
+      "Identity": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.min.css",
+      "SourceId": "OffreDmploie",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\",
+      "BasePath": "_content/OffreDmploie",
+      "RelativePath": "css/select2-bootstrap-5-theme.rtl.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f9k4fvkj2a",
+      "Integrity": "bXXMs+0o746W3FX9DzwopnPEHG3bX9Ar53Wo7rv908c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\select2-bootstrap-5-theme.rtl.min.css"
     },
     {
       "Identity": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\site.css",
@@ -4853,6 +4937,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-8TaWsJAMXBizU3rI8xfOD3z3eNH+F4RInBt8asw3ANg="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.9t6rxls2rs.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PdA95MFDvPdYlnfpIczR/wkxW/Us9YI/lQR3OkU80OY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9t6rxls2rs"
+        },
+        {
+          "Name": "label",
+          "Value": "css/select2-bootstrap-5-theme.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PdA95MFDvPdYlnfpIczR/wkxW/Us9YI/lQR3OkU80OY="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PdA95MFDvPdYlnfpIczR/wkxW/Us9YI/lQR3OkU80OY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PdA95MFDvPdYlnfpIczR/wkxW/Us9YI/lQR3OkU80OY="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.min.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLNUEfzPGHBeStES2DbLUURZ3e793BablwzJlYj6W2Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLNUEfzPGHBeStES2DbLUURZ3e793BablwzJlYj6W2Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.min.wfe5v7adcw.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLNUEfzPGHBeStES2DbLUURZ3e793BablwzJlYj6W2Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wfe5v7adcw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/select2-bootstrap-5-theme.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLNUEfzPGHBeStES2DbLUURZ3e793BablwzJlYj6W2Q="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.rtl.4a7ercfsxc.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLffXXWZpoYoOoO7GfXAoBD7n/KAY+IzKgxoJkQ+7MM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4a7ercfsxc"
+        },
+        {
+          "Name": "label",
+          "Value": "css/select2-bootstrap-5-theme.rtl.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLffXXWZpoYoOoO7GfXAoBD7n/KAY+IzKgxoJkQ+7MM="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.rtl.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33691"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLffXXWZpoYoOoO7GfXAoBD7n/KAY+IzKgxoJkQ+7MM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLffXXWZpoYoOoO7GfXAoBD7n/KAY+IzKgxoJkQ+7MM="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.rtl.min.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bXXMs+0o746W3FX9DzwopnPEHG3bX9Ar53Wo7rv908c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bXXMs+0o746W3FX9DzwopnPEHG3bX9Ar53Wo7rv908c="
+        }
+      ]
+    },
+    {
+      "Route": "css/select2-bootstrap-5-theme.rtl.min.f9k4fvkj2a.css",
+      "AssetFile": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bXXMs+0o746W3FX9DzwopnPEHG3bX9Ar53Wo7rv908c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 08:53:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f9k4fvkj2a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/select2-bootstrap-5-theme.rtl.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bXXMs+0o746W3FX9DzwopnPEHG3bX9Ar53Wo7rv908c="
         }
       ]
     },

@@ -73,6 +73,22 @@
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap-5-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.min.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap-5-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap-5-theme.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\select2-bootstrap-5-theme.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap-5-theme.rtl.min.css"
+    },
+    {
       "Id": "C:\\Users\\yassi\\source\\repos\\OffreDmploie\\OffreDmploie\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

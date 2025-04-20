@@ -24,6 +24,7 @@ namespace OffreDmploie.Controllers
             _context = context;
             _userManager = userManager;
         }
+
         [HttpGet]
         public async Task<IActionResult> CloseJob(int id)
         {
@@ -58,29 +59,44 @@ namespace OffreDmploie.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
-        // GET: Jobs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(List<int> domaines, string Lieu)
         {
-            if (User.IsInRole("Entreprise")) { 
+            if (User.IsInRole("Entreprise"))
+            {
                 var user = await _userManager.GetUserAsync(User);
                 var applicationDbContext = _context.Jobs
                     .Include(j => j.Domaine)
                     .Include(j => j.User)
-                    .Where(c=>c.IdUser == user.Id);
+                    .Where(c => c.IdUser == user.Id);
                 return View(await applicationDbContext.ToListAsync());
             }
             else
             {
-
-                var user = await _userManager.GetUserAsync(User);
-                var applicationDbContext = _context.Jobs
+                var query = _context.Jobs
                     .Include(j => j.Domaine)
-                    .Include(j => j.User);
-                return View(await applicationDbContext.ToListAsync());
+                    .Include(j => j.User)
+                    .AsQueryable();
+
+                if (domaines != null && domaines.Any())
+                {
+                    query = query.Where(o => domaines.Contains(o.IdDomaine));
+                }
+
+                if (!string.IsNullOrEmpty(Lieu))
+                {
+                    query = query.Where(o => o.Lieu == Lieu);
+                }
+
+                return View(await query.ToListAsync());
             }
+
+
+
+
         }
+
+        // GET: Jobs
+        
 
         // GET: Jobs/Details/5
         public async Task<IActionResult> Details(int? id)

@@ -1,4 +1,7 @@
-﻿@model IEnumerable<OffreDmploie.Models.Job>
+﻿@using Microsoft.EntityFrameworkCore
+@using OffreDmploie.Data
+@model IEnumerable<OffreDmploie.Models.Job>
+@inject ApplicationDbContext _context;
 <!-- End Header Area -->
 
 <!-- Start Hero Area -->
@@ -20,19 +23,84 @@
                         </div>
                         <div class="job-search-wrap-two mt-50 wow fadeInUp" data-wow-delay=".7s">
                             <div class="job-search-form">
-                                <form action="#">
-                                    <!-- Single Field Item Start  -->
+                                <form asp-action="Index" asp-controller="Jobs" method="get">
+                                    <!-- Domaines -->
                                     <div class="single-field-item keyword">
-                                        <label for="keyword">What</label>
-                                        <input id="keyword" placeholder="What jobs you want?" name="keyword"
-                                               type="text">
+                                        <label for="domaines">Domaines</label>
+                                        <select id="domaines" name="domaines" multiple class="form-select" id="multiple-select-optgroup-field">
+                                            @foreach (var domaine in ViewBag.IdDomaine = await _context.Domaines.ToListAsync())
+                                            {
+                                                <option value="@domaine.id">@domaine.Nomdomaine</option>
+                                            }
+                                        </select>
                                     </div>
                                     <!-- Single Field Item End  -->
                                     <!-- Single Field Item Start  -->
                                     <div class="single-field-item location">
                                         <label for="location">Where</label>
-                                        <input id="location" class="input-field input-field-location"
-                                               placeholder="Location" name="location" type="text">
+                                        <select id="location" name="Lieu" class="form-select">
+                                            <option value="">-- Sélectionnez un pays --</option>
+                                            <option value="Afghanistan">🇦🇫 Afghanistan</option>
+                                            <option value="Albanie">🇦🇱 Albanie</option>
+                                            <option value="Algérie">🇩🇿 Algérie</option>
+                                            <option value="Andorre">🇦🇩 Andorre</option>
+                                            <option value="Angola">🇦🇴 Angola</option>
+                                            <option value="Argentine">🇦🇷 Argentine</option>
+                                            <option value="Arménie">🇦🇲 Arménie</option>
+                                            <option value="Australie">🇦🇺 Australie</option>
+                                            <option value="Autriche">🇦🇹 Autriche</option>
+                                            <option value="Azerbaïdjan">🇦🇿 Azerbaïdjan</option>
+                                            <option value="Belgique">🇧🇪 Belgique</option>
+                                            <option value="Bénin">🇧🇯 Bénin</option>
+                                            <option value="Brésil">🇧🇷 Brésil</option>
+                                            <option value="Burkina Faso">🇧🇫 Burkina Faso</option>
+                                            <option value="Canada">🇨🇦 Canada</option>
+                                            <option value="Chili">🇨🇱 Chili</option>
+                                            <option value="Chine">🇨🇳 Chine</option>
+                                            <option value="Colombie">🇨🇴 Colombie</option>
+                                            <option value="Croatie">🇭🇷 Croatie</option>
+                                            <option value="Danemark">🇩🇰 Danemark</option>
+                                            <option value="Égypte">🇪🇬 Égypte</option>
+                                            <option value="France">🇫🇷 France</option>
+                                            <option value="Allemagne">🇩🇪 Allemagne</option>
+                                            <option value="Grèce">🇬🇷 Grèce</option>
+                                            <option value="Hongrie">🇭🇺 Hongrie</option>
+                                            <option value="Inde">🇮🇳 Inde</option>
+                                            <option value="Indonésie">🇮🇩 Indonésie</option>
+                                            <option value="Iran">🇮🇷 Iran</option>
+                                            <option value="Irak">🇮🇶 Irak</option>
+                                            <option value="Irlande">🇮🇪 Irlande</option>
+                                            <option value="Israël">🇮🇱 Israël</option>
+                                            <option value="Italie">🇮🇹 Italie</option>
+                                            <option value="Japon">🇯🇵 Japon</option>
+                                            <option value="Jordanie">🇯🇴 Jordanie</option>
+                                            <option value="Kazakhstan">🇰🇿 Kazakhstan</option>
+                                            <option value="Kenya">🇰🇪 Kenya</option>
+                                            <option value="Corée du Sud">🇰🇷 Corée du Sud</option>
+                                            <option value="Mexique">🇲🇽 Mexique</option>
+                                            <option value="Maroc">🇲🇦 Maroc</option>
+                                            <option value="Pays-Bas">🇳🇱 Pays-Bas</option>
+                                            <option value="Nigéria">🇳🇬 Nigéria</option>
+                                            <option value="Norvège">🇳🇴 Norvège</option>
+                                            <option value="Pakistan">🇵🇰 Pakistan</option>
+                                            <option value="Pologne">🇵🇱 Pologne</option>
+                                            <option value="Portugal">🇵🇹 Portugal</option>
+                                            <option value="Qatar">🇶🇦 Qatar</option>
+                                            <option value="Roumanie">🇷🇴 Roumanie</option>
+                                            <option value="Russie">🇷🇺 Russie</option>
+                                            <option value="Arabie Saoudite">🇸🇦 Arabie Saoudite</option>
+                                            <option value="Sénégal">🇸🇳 Sénégal</option>
+                                            <option value="Serbie">🇷🇸 Serbie</option>
+                                            <option value="Singapour">🇸🇬 Singapour</option>
+                                            <option value="Afrique du Sud">🇿🇦 Afrique du Sud</option>
+                                            <option value="Espagne">🇪🇸 Espagne</option>
+                                            <option value="Suède">🇸🇪 Suède</option>
+                                            <option value="Suisse">🇨🇭 Suisse</option>
+                                            <option value="Syrie">🇸🇾 Syrie</option>
+                                            <option value="Tunisie">🇹🇳 Tunisie</option>
+                                            <option value="Turquie">🇹🇷 Turquie</option>
+                                            <option value="Ukraine">🇺🇦 Ukraine</option>
+                                        </select>
                                     </div>
                                     <!-- Single Field Item End  -->
                                     <div class="submit-btn">

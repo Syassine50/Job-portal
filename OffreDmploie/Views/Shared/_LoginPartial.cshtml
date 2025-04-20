@@ -3,11 +3,13 @@
 @inject UserManager<User> UserManager
 
 <ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" style="width:200px ; align-self:flex-end" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name</a>
-    </li>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a  class="nav-link text-dark" style="width:200px ; align-self:flex-end" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @{
+                    var user = await UserManager.GetUserAsync(User);}
+                    @user.Nometprenom</a>
+        </li>
     <li class="nav-item">
         <form class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                 

@@ -154,7 +154,8 @@ namespace OffreDmploie.Areas.Identity.Pages.Account
                             {
                                 ModelState.AddModelError(string.Empty, error.Description);
                             }
-                            return Page();
+                            return RedirectToAction("Index", "User");
+
                         }
                     }
                     else {

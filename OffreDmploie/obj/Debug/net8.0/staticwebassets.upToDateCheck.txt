@@ -15,6 +15,10 @@ wwwroot\css\bootstrap.min.css
 wwwroot\css\glightbox.min.css
 wwwroot\css\LineIcons.2.0.css
 wwwroot\css\main.css
+wwwroot\css\select2-bootstrap-5-theme.css
+wwwroot\css\select2-bootstrap-5-theme.min.css
+wwwroot\css\select2-bootstrap-5-theme.rtl.css
+wwwroot\css\select2-bootstrap-5-theme.rtl.min.css
 wwwroot\css\site.css
 wwwroot\css\tiny-slider.css
 wwwroot\favicon.ico
