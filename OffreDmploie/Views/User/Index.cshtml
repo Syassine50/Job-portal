@@ -1,0 +1,169 @@
+@model IEnumerable<OffreDmploie.Models.User>
+@{
+    ViewData["Title"] = "Gestion des Utilisateurs";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fw-bold mb-1">Gestion des Utilisateurs</h1>
+            <p class="text-muted">Administration et vue d'ensemble de tous les utilisateurs du système</p>
+        </div>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-person-plus me-2"></i>Nouvel Utilisateur
+        </a>
+    </div>
+
+    <!-- Carte de filtrage et recherche -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        <input type="text" id="searchUser" class="form-control" placeholder="Rechercher un utilisateur...">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select id="filterRole" class="form-select">
+                        <option value="">Tous les rôles</option>
+                        <option value="admin">Administrateurs</option>
+                        <option value="company">Entreprises</option>
+                        <option value="candidate">Candidats</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select id="filterStatus" class="form-select">
+                        <option value="">Tous les statuts</option>
+                        <option value="active">Actifs</option>
+                        <option value="locked">Verrouillés</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableau des utilisateurs -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="fw-bold">Nom et Prénom</th>
+                            <th class="fw-bold">Entreprise</th>
+                            <th class="fw-bold">Nom d'utilisateur</th>
+                            <th class="fw-bold">Email</th>
+                            <th class="fw-bold">Téléphone</th>
+                            <th class="fw-bold">Statut</th>
+                            <th class="fw-bold text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Any())
+                        {
+                            @foreach (var item in Model)
+                            {
+                                
+                                <tr>
+                                    <td class="align-middle fw-semibold">
+                                        @Html.DisplayFor(modelItem => item.Nometprenom)
+                                    </td>
+                                    <td class="align-middle">
+                                        @Html.DisplayFor(modelItem => item.Nomdentreprise)
+                                    </td>
+                                    <td class="align-middle">
+                                        @Html.DisplayFor(modelItem => item.UserName)
+                                    </td>
+                                    <td class="align-middle">
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td class="align-middle">
+                                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                    </td>
+                                   
+                                    <td class="align-middle text-center">
+                                        <div class="btn-group" role="group">
+                                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary" title="Détails">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary" title="Modifier">
+                                                <i class="bi bi-pencil"></i>
+                                            </a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger" title="Supprimer">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="7" class="text-center py-4">
+                                    <div class="text-muted">
+                                        <i class="bi bi-people fs-1 d-block mb-3"></i>
+                                        <p>Aucun utilisateur trouvé</p>
+                                        <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-sm btn-primary mt-2">
+                                            Ajouter un utilisateur
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    
+</div>
+
+<script>
+    // Fonction pour la recherche en temps réel
+    document.getElementById('searchUser').addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        const tableRows = document.querySelectorAll('tbody tr');
+
+        tableRows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
+    });
+
+    // Fonction pour basculer le statut de l'utilisateur (verrouillé/déverrouillé)
+    function toggleUserStatus(userId) {
+        // Cette fonction serait connectée à votre controller
+        // Ici, nous montrons juste une alerte pour démontrer le concept
+        alert(`Status modifié pour l'utilisateur ${userId}`);
+    }
+
+    // Fonction pour filtrer par rôle et statut
+    document.getElementById('filterRole').addEventListener('change', filterUsers);
+    document.getElementById('filterStatus').addEventListener('change', filterUsers);
+
+    function filterUsers() {
+        // Logique de filtrage à implémenter selon vos besoins
+        console.log("Filtrage des utilisateurs...");
+    }
+</script>
+
+<style>
+    .table th, .table td {
+        padding: 1rem;
+        vertical-align: middle;
+    }
+
+    .badge {
+        font-weight: 500;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+   
+</style>

@@ -327,6 +327,12 @@ namespace OffreDmploie.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<string>("Nomdentreprise")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nometprenom")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");

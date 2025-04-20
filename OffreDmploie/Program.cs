@@ -13,7 +13,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Ajouter Identity avec User et ApplicationDbContext
 builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>() // Optionnel : si tu utilises des rôles
+    .AddRoles<IdentityRole>() // Optionnel : si tu utilises des rï¿½les
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
